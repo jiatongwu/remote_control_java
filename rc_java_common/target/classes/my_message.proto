@@ -1,0 +1,79 @@
+syntax = "proto2";
+
+package tutorial;
+
+option java_package = "cn.xvkang.wussserver2.nettyProtobuf.protobuf";
+option java_outer_classname = "ProtoBufNettyMessage";
+message Data{
+enum DataType{
+OPEN =0;
+CLOSE=1; 
+RINETD=2;
+SSHR=3;
+SSHRTOREMOTECLIENTDATA=4;
+SSHRREMOTECLIENTRETURNEDDATA=5;
+SSHR_TELL_REMOTE_CLIENT_DISCONNECT=6;
+SSHR_TELL_SERVER_CLIENT_DISCONNECT=7;
+STOP_All_RINETD=8;
+STOP_ALL_SSHR=9;
+LIST_RINETD_AND_SSHR_LISTEN_INFO=10;
+LIST_RINETD_AND_SSHR_LISTEN_INFO_RETURN=11;
+}
+required DataType data_type = 1;
+oneof dataBody{
+Open openData=2;
+Close closeData=3;
+Rinetd rinetdData=4;
+SshR sshRData=5;
+SshRToRemoteClientData sshRToRemoteClientData=6;
+SshRRemoteClientReturnedData sshRRemoteClientReturnedData=7;
+SshRTellRemoteClientDisConnectData sshRTellRemoteClientDisConnectData=8;
+SshRTellServerClientDisConnectData sshRTellServerClientDisConnectData=9;
+ListRinedtAndSshrListenInfoReturnData listRinedtAndSshrListenInfoReturnData=10;
+}
+
+}
+message Open {
+  optional string name = 1;
+  optional string email = 2;
+
+
+}
+  message Close {
+    optional  string number = 1;
+  }
+  
+message Rinetd{
+    optional int32 listenPort=1;
+    optional string toIp=2;
+    optional int32 toPort=3;
+}  
+
+message SshR{
+    optional int32 listenPort=1;
+    optional int32 clientLocalPort=2;
+
+}
+message SshRToRemoteClientData{
+    optional string uuid = 1;
+    optional int32 localPort=2;    
+    optional bytes bytesData=3;
+    optional int32 serverListenPort=4;
+}
+message SshRTellRemoteClientDisConnectData{
+    optional string uuid = 1;
+}
+message SshRTellServerClientDisConnectData{
+    optional string uuid = 1;
+    optional int32 serverListenPort=2;
+}
+message SshRRemoteClientReturnedData{
+    optional  string uuid = 1;
+    optional bytes bytesData=2;
+    optional int32 serverListenPort=3;    
+}
+message  ListRinedtAndSshrListenInfoReturnData{
+    optional string jsonData=1;
+}
+
+

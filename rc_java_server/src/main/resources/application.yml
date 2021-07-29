@@ -1,0 +1,10 @@
+logging:
+  level:
+    '[cn.xvkang]': info
+
+spring:
+  profiles:
+    active: '@profile.active@'
+#  main: 
+#    web-application-type: none
+#    web-environment: false

@@ -1,0 +1,11 @@
+#logging:
+#  level:
+#    '[cn.xvkang]': debug
+#    '[cn.xvkang.wussserver2.mapper]': debug
+
+spring:
+  profiles:
+    active: '@profile.active@'
+#  main: 
+#    web-application-type: none
+#    web-environment: false

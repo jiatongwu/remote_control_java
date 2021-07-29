@@ -1,0 +1,20 @@
+#logging:
+#  level:
+#    '[cn.xvkang]': debug
+#    '[cn.xvkang.wussserver2.mapper]': debug
+
+spring:
+  main: 
+    web-application-type: none
+    web-environment: false
+
+#server:
+#  port: 6666
+#  compression:
+#    enabled: false
+#  servlet:
+#    context-path: /api
+#fastdfs:
+#  nginx:
+#    host: http://192.168.91.128/
+# mybaits-plus配置

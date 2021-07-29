@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rc_java.iml" filepath="$PROJECT_DIR$/rc_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rc_java_client/rc_java_client.iml" filepath="$PROJECT_DIR$/rc_java_client/rc_java_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rc_java_common/rc_java_common.iml" filepath="$PROJECT_DIR$/rc_java_common/rc_java_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rc_java_server/rc_java_server.iml" filepath="$PROJECT_DIR$/rc_java_server/rc_java_server.iml" />
+    </modules>
+  </component>
+</project>
